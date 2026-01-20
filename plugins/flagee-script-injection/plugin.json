@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
   "type": "app",
-  "id": "flagee-script-injection-app",
+  "id": "flagee-injection-app",
   "name": "Flagee Script Injection",
   "backend": false,
   "info": {
@@ -20,7 +20,13 @@
         "path": "img/screenshot.svg"
       }
     ],
-    "version": "1.0.1",
+    "links": [
+      {
+        "name": "sponsor",
+        "url": "https://flagee.cloud"
+      }
+    ],
+    "version": "1.0.2",
     "updated": "2026-01-20"
   },
   "dependencies": {
@@ -33,7 +39,7 @@
       "name": "CSS/JS Injector",
       "addToNav": true,
       "defaultNav": true,
-      "path": "/a/flagee-script-injection-app"
+      "path": "/a/flagee-injection-app"
     }
   ],
   "autoEnabled": true,
