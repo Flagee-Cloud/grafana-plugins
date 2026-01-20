@@ -1,0 +1,23 @@
+{
+  "name": "flagee-script-injection",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "dev": "node ./scripts/build.js --watch"
+  },
+  "dependencies": {
+    "@grafana/data": "^8.5.27",
+    "@grafana/runtime": "^8.5.27",
+    "@grafana/ui": "^8.5.27",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@grafana/sign-plugin": "^3.2.1",
+    "@types/react": "^17.0.83",
+    "@types/react-dom": "^17.0.25",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="64" viewBox="0 0 256 64">
+  <rect width="256" height="64" rx="12" fill="#0B5FFF" />
+  <path d="M20 44l14-24 14 24h-6l-8-14-8 14h-6z" fill="#FFFFFF" />
+  <text x="70" y="42" font-family="Arial, sans-serif" font-size="26" fill="#FFFFFF">Injector</text>
+</svg>

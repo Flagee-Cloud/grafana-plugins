@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "id": "flagee-script-injection-app",
+  "name": "Flagee Script Injection",
+  "backend": false,
+  "info": {
+    "description": "Inject custom CSS and Javascript into Grafana.",
+    "author": {
+      "name": "Flagee"
+    },
+    "keywords": ["css", "javascript", "inject"],
+    "logos": {
+      "small": "img/logo_small.svg",
+      "large": "img/logo_large.svg"
+    },
+    "version": "1.0.0",
+    "updated": "2026-01-20"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=9.0.0",
+    "plugins": []
+  },
+  "includes": [
+    {
+      "type": "page",
+      "name": "CSS/JS Injector",
+      "addToNav": true,
+      "defaultNav": true,
+      "path": "/a/flagee-script-injection-app"
+    }
+  ],
+  "autoEnabled": true,
+  "preload": true,
+  "buildMode": "production"
+}
