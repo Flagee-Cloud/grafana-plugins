@@ -14,7 +14,13 @@
       "small": "img/logo_small.svg",
       "large": "img/logo_large.svg"
     },
-    "version": "1.0.0",
+    "screenshots": [
+      {
+        "name": "Overview",
+        "path": "img/screenshot.svg"
+      }
+    ],
+    "version": "1.0.1",
     "updated": "2026-01-20"
   },
   "dependencies": {

@@ -20,6 +20,9 @@ const options = {
 const assetItems = [
   { src: path.join(__dirname, '..', 'plugin.json'), dest: path.join(outdir, 'plugin.json') },
   { src: path.join(__dirname, '..', 'img'), dest: path.join(outdir, 'img'), isDir: true },
+  { src: path.join(__dirname, '..', 'README.md'), dest: path.join(outdir, 'README.md') },
+  { src: path.join(__dirname, '..', 'CHANGELOG.md'), dest: path.join(outdir, 'CHANGELOG.md') },
+  { src: path.join(__dirname, '..', 'LICENSE'), dest: path.join(outdir, 'LICENSE') },
 ];
 
 function syncAssets() {

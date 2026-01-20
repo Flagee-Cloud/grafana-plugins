@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1021" />
+      <stop offset="100%" stop-color="#1a3a5a" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)" />
+  <rect x="60" y="80" width="1080" height="540" rx="18" fill="#111827" stroke="#2f3a4a" />
+  <rect x="90" y="120" width="280" height="16" rx="8" fill="#2dd4bf" />
+  <rect x="90" y="160" width="420" height="12" rx="6" fill="#94a3b8" opacity="0.7" />
+  <rect x="90" y="200" width="980" height="320" rx="12" fill="#0f172a" stroke="#1f2937" />
+  <text x="600" y="380" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Flagee Script Injection</text>
+  <text x="600" y="420" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">Inject custom CSS and JavaScript into Grafana</text>
+</svg>
