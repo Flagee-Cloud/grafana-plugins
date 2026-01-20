@@ -1,0 +1,57 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: plugins/flagee-script-injection/package-lock.json
+
+      - name: Build plugin
+        working-directory: plugins/flagee-script-injection
+        run: |
+          npm ci
+          npm run build
+
+      - name: Package release
+        env:
+          PLUGIN_ID: flagee-injection-app
+          VERSION: ${{ github.ref_name }}
+        run: |
+          VERSION=${VERSION#v}
+          rm -rf release
+          mkdir -p release/${PLUGIN_ID}
+          cp -a plugins/flagee-script-injection/dist/* release/${PLUGIN_ID}/
+          cd release
+          zip -r ${PLUGIN_ID}-${VERSION}.zip ${PLUGIN_ID}
+          sha1sum ${PLUGIN_ID}-${VERSION}.zip > ${PLUGIN_ID}-${VERSION}.zip.sha1
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: release/*.zip
+
+      - name: Publish release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/*.zip
+            release/*.zip.sha1
